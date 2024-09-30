@@ -593,6 +593,12 @@ video {
   --hover-color: #67a510;
 }
 
+*{
+  box-sizing: border-box;
+  outline: none !important;
+  color: var(--primary-font-color);
+}
+
 body{
   font-family: 'Helvetica', sans-serif;
 }
@@ -643,6 +649,9 @@ body{
   color: var(--primary-color);
   a{
     text-decoration: none;
+    span{
+      color: var(--primary-color);
+    }
   }
 }
 
@@ -753,7 +762,7 @@ body{
 
 .product-img{
   position: absolute;
-  top: 450px;
+  top: 420px;
   left: calc(50% - 555px);
   z-index: 10;
 }
@@ -770,5 +779,176 @@ body{
     font-size: 32px;
     color: #fff;
     font-weight: 700;
+  }
+}
+
+.advantages-list-block{
+  margin-top: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2{
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    width: 900px;
+  }
+}
+
+.advantages-list{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.advantages-list-item{
+  width: 600px;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 150px;
+  border: 1px solid #ccc;
+  .advantages-list-item__text{
+    width: calc(100% - 68px);
+    margin-left: 12px;
+    h3{
+      color: var(--primary-color);
+      font-size: 30px;
+      font-weight: 700;
+    }
+    p{
+      margin-top: 5px;
+      font-size: 20px;
+    }
+  }
+}
+
+.advantages-list-item_big{
+  height: 220px;
+}
+
+.advantages-list-item_mod{
+  padding: 20px 0;
+  padding-right: 20px;
+  border: none;
+  .advantages-list-item__img{
+    width: 106px;
+    height: 106px;
+    overflow: hidden;
+    position: relative;
+    right: 30px;
+    img{
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+  }
+}
+
+.official-block{
+  margin-top: 60px;
+  width: 100%;
+  background: var(--primary-color);
+  p{
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+.hour-data{
+  height: 1100px;
+  overflow: hidden;
+  position: relative;
+  .hour-data__rounds{
+    width: 1353px;
+    height: 1353px;
+    opacity: 0.2;
+    position: absolute;
+    top: 170px;
+    left: -390px;
+    z-index: 5;
+    .hour-data__round-big{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(50% 50% at 50% 50%, rgb(238, 247, 226) 77%, rgb(122, 203, 11) 100%);
+    }
+    .hour-data__round-medium{
+      width: 835px;
+      height: 835px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: radial-gradient(50% 50% at 50% 50%, rgb(238, 247, 226) 58%, rgb(122, 203, 11) 100%);
+    }
+    .hour-data__round-small{
+      width: 327px;
+      height: 327px;
+      border-radius: 50%;
+      background: radial-gradient(50% 50% at 50% 50%, rgb(238, 247, 226) 43%, rgb(122, 203, 11) 100%);
+    }
+  }
+  .hour-data__content-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    .hour-data__content{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 60px;
+      h2{
+        color: var(--primary-color);
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+      }
+      .data-img{
+        margin-top: 40px;
+        width: 100%;
+      }
+      .download-btn{
+        margin-top: 50px;
+        width: 600px;
+        height: 70px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 30px;
+        background: var(--primary-color);
+        border-radius: 50px;
+        transition: 0.3s all ease;
+        &:hover{
+          background: var(--hover-color);
+        }
+      }
+    }
+  }
+}
+
+.product-list__block{
+  margin-top: 50px;
+  h2{
+    color: var(--primary-color);
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
   }
 }
