@@ -952,3 +952,46 @@ body{
     text-align: center;
   }
 }
+
+.product-block-main{
+  width: 100%;
+  padding: 50px 0 200px;
+  position: relative;
+  overflow: hidden;
+  min-height: 700px;
+  .product-block-main__content{
+    position: relative;
+    z-index: 20;
+  }
+  .product-block-main__rounds{
+    position: absolute;
+    width: 760px;
+    height: 680px;
+    bottom: -400px;
+    right: -360px;
+    .product-block-main__round-big{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #F6F6F6;
+    }
+    .product-block-main__round-medium{
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 611px;
+      height: 542px;
+      background: #EFEFEF;
+    }
+    .product-block-main__round-small{
+      width: 450px;
+      height: 400px;
+      border-radius: 50%;
+      background: #E9E9E9;
+    }
+  }
+}
