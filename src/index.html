@@ -4,93 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/js/splide/css/splide-core.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Anytime CGM</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header__motivation">
-            <p>Anytime CGM - официальный представитель на территории СНГ</p>
-        </div>
-        <div class="header__top">
-            <p>Надежная система непрерывного мониторинга глюкозы</p>
-        </div>
-        <div class="header__bottom">
+    <header class="header-main header-basic">
+        <img src="assets/img/header-bg.jpg" class="header-bg" alt="">
+        <div class="header-wrapper">
             <div class="box-container">
-                <div class="header__bottom-wrapper">
-                    <div class="header_logo">
-                        <a href="/">
-                            <span>Anytime</span>
-                        </a>
-                    </div>
-                    <!--/header_logo-->
-                    <div class="header__bottom-nav">
-                        <div class="header__bottom-nav-info">
-                            <div class="header__bottom-nav-info__block">
-                                <p>Ваша страна: <span>Россия</span></p>   
-                                <p class="select-action">Выбрать другую</p>   
-                            </div>
-                            <!--/header__bottom-nav-info__block-->
-        
-                            <div class="header__bottom-nav-info__block">
-                                <p>Ваш город: <span>Москва</span></p>   
-                                <p class="select-action">Выбрать другой</p>   
-                            </div>
-                            <!--/header__bottom-nav-info__block-->
+                <div class="header-head">
+                    <span class="header-logo">Anytime</span>
 
-                            <div class="header__bottom-nav-info__block">
-                                <p><a href="#">+375 17 336 08 70</a></p>   
-                                <p class="select-action">Заказать звонок</p>   
-                            </div>
-                            <!--/header__bottom-nav-info__block-->
+                    <nav class="header-nav">
+                        <a href="#">Каталог</a>
+                        <a href="#">Специалистам</a>
+                        <a href="#">Доставка и  оплата</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Контакты</a>
+                    </nav>
 
-                            <div class="header__bottom-nav-info__block-cart">
-                                <img src="assets/img/logo.jpg" alt="">
-                                <div class="cart-icon">
-                                    <img src="assets/img/icons/cart.svg" alt="">
-                                </div>
+                    <div class="yuwell-cart-menu">
+                        <img src="assets/img/logo-w.png" alt="">
+                        <div class="yuwell-cart__block">
+                            <img src="assets/img/icons/header/cart.svg" alt="">
+                            <div class="yuwell-cart__counter">
+                                <span>3</span>
                             </div>
-                            <!--/header__bottom-nav-info__block-cart-->
                         </div>
-                        <nav class="header__bottom-nav-info__nav">
-                            <a href="#">Продукт</a>
-                            <a href="#">Специалистам</a>
-                            <a href="#">Статьи</a>
-                            <a href="#">Доставка</a>
-                            <a href="#">FAQ</a>
-                            <a href="#">О компании</a>
-                        </nav>
+                        <!--/.yuwell-cart__block-->
+                        <img src="assets/img/icons/header/menu.svg" alt="" class="yuwell-menu">
                     </div>
-                    <!--/header__bottom-nav-->
+                    <!-- /.yuwell-cart -->
+
+                    <div class="header-menu">
+                        <div class="close">
+                            <img src="assets/img/icons/header/close.svg" alt="">
+                        </div>
+                        <!--/.close-->
+
+                        <div class="custom-select" id="country-select">
+                            <div class="custom-select__current">
+                                <div class="custom-select__current-value">
+                                    <img src="assets/img/icons/header/countries/ru.svg" alt="">
+                                    <p>Россия</p>
+                                </div>
+                                <!-- /.custom-select__current-value -->
+                                <img src="assets/img/icons/arrow.svg" class="select-arrow" alt="">
+                            </div>
+                            <!--/.custom-select__current-->
+                            <div class="custom-select__list">
+                                <div class="custom-select__list-item" data-value="ru">
+                                    <img src="assets/img/icons/header/countries/ru.svg" alt="">
+                                    <p>Россия</p>
+                                </div>
+                                <!--/.custom-select__list-item-->
+                                <div class="custom-select__list-item" data-value="bel">
+                                    <img src="assets/img/icons/header/countries/bel.svg" alt="">
+                                    <p>Беларусь</p>
+                                </div>
+                                <!--/.custom-select__list-item-->
+                                <div class="custom-select__list-item" data-value="bel">
+                                    <img src="assets/img/icons/header/countries/kz.svg" alt="">
+                                    <p>Казахстан</p>
+                                </div>
+                                <!--/.custom-select__list-item-->
+                                <div class="custom-select__list-item" data-value="bel">
+                                    <img src="assets/img/icons/header/countries/arm.svg" alt="">
+                                    <p>Армения</p>
+                                </div>
+                                <!--/.custom-select__list-item-->
+                            </div>
+                            <!--/.custom-select__list-->
+                        </div>
+                        <!-- /.custom-select -->
+
+                        <ul class="header-menu-nav header-menu-nav_margin">
+                            <li><a href="#">Статьи</a></li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Сертификаты</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Помощь</a></li>
+                        </ul>
+
+                        <button class="recall-header">Перезвоните мне</button>
+                    </div>
+                    <!--/.header-menu-->
+
+                    <div class="cart-block">
+                        
+                    </div>
+                    <!-- /.cart-block -->
                 </div>
-                <!--/header__bottom-wrapper-->
+                <!--/.header-head-->
+
+                <div class="motto-block">
+                    <h1>Управляйте диабетом с уверенностью</h1>
+                    <p>Следите за уровнем глюкозы и ее изменений без необходимости прокалывать пальцы</p>
+                    <a href="#">
+                        <button>Подробнее</button>
+                    </a>
+                </div>
+                <!-- /.motto-block -->
             </div>
-            <!--/box-container-->
+            <!--/.box-container-->
+
+            <div class="header-app-about">
+                <p>Данные легко передаются онлайн врачу или близким</p>
+            </div>
+
+            <img src="assets/img/phone-item-block.png" class="header-app-phone" alt="">
         </div>
+        <!--/.header-wrapper-->
     </header>
+    <!--/.header-main-->
+
 
     <main>
-        <div class="banner-main">
-            <img src="assets/img/banner-bg.jpg" alt="" class="banner-img-bg">
-            <div class="banner-main__text">
-                <h1>Управляйте диабетом с уверенностью</h1>
-                <p>Следите за уровнем глюкозы и его изменениями.Без необходимости прокалывать пальцы.</p>
-                <a href="#">
-                    <button class="banner-main__text-btn">Купить</button>
-                </a>
-            </div>
-
-            <div class="product-img">
-                <img src="assets/img/phone-item-block.png" alt="">
-            </div>
-
-            <div class="product-description">
-                <p>Данные легко передаются онлайн врачу или близким </p>
-            </div>
-        </div>
-        <!--/.banner-main-->
-
         <div class="box-container">
             <section class="advantages-list-block">
                 <h2>Получайте мгновенную информацию о том, как питание, активность и инсулин влияют на уровень глюкозы</h2>
@@ -176,41 +209,36 @@
         </div>
         <!--/.box-container-->
 
-        <div class="official-block">
+        <section class="hour-video">
             <div class="box-container">
-                <p>Официальный представитель Yuwell Anytime CGM</p>
-            </div>
-        </div>
-        <!--/official-block-->
-
-        <div class="hour-data">
-            <div class="hour-data__rounds">
-                <div class="hour-data__round-big">
-                    <div class="hour-data__round-medium">
-                        <div class="hour-data__round-small"></div>
-                    </div>
+                <div class="hour-video__title">
+                    <h2>Официальный представитель Yuwell Anytime CGM на территории СНГ</h2>
+                    <div class="line"></div>
+                    <!-- /.line -->
                 </div>
+                <!-- /.hour-video__title -->
             </div>
-            <!--/.hour-data__rounds-->
+            <!-- /.box-container -->
 
-            <div class="hour-data__content-wrapper">
+            <div class="hour-video-block">
+                <div class="hour-video">
+                    <video src="#" poster="assets/img/hour-video-banner.jpg"></video>
+                </div>
+                <!-- /.hour-video -->
                 <div class="box-container">
-                    <div class="hour-data__content">
-                        <h2>Показатели уровня глюкозы отправляются на телефон каждую секунду</h2>
-
-                        <img src="assets/img/hour-data.jpg" alt="" class="data-img">
-
+                    <div class="hour-video-block-text">
+                        <p>Показатели уровня глюкозы отправляются на телефон каждую секунду</p>
                         <a href="#">
-                            <button class="download-btn">Скачать приложение</button>
+                            <button>Скачать приложение</button>
                         </a>
                     </div>
-                    <!-- /.hour-data__content -->
+                    <!-- /.hour-video-block-text -->
                 </div>
-                <!--/.box-container-->
+                <!-- /.box-container -->
             </div>
-            <!--/.hour-data__content-wrapper-->
-        </div>
-        <!-- /.hour-data -->
+            <!-- /.hour-video-block -->
+        </section>
+        <!-- /.hour-video -->
 
         <div class="product-block-main">
             <div class="product-block-main__rounds">
@@ -932,6 +960,84 @@
             <!-- /.faq-block -->
         </div>
     </main>
+
+    <footer class="footer">
+        <div class="box-container">
+            <div class="footer-col">
+                <span class="footer-logo">Anytime</span>
+                
+                <div class="support-block">
+                    <a href="tel://+375173360870">+375 17 336-08-70</a>
+                    <p>Служба поддержки</p>
+                </div>
+                <!--/.support-block-->
+            </div>
+            <!-- /.footer-col -->
+
+            <div class="footer-col">
+                <h2 class="footer-col__title">Меню</h2>
+                <div class="footer-col__menu">
+                    <ul>
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">Специалистам</a></li>
+                        <li><a href="#">Доставка и  оплата</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#">Статьи</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Сертификаты</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Помощь</a></li>
+                    </ul>
+                </div>
+                <!-- /.footer-col__menu -->
+            </div>
+            <!--/.footer-col-->
+
+            <div class="footer-col">
+                <h2 class="footer-col__title">Приложение</h2>
+
+                <div class="footer-col-app-block">
+                    <a href="#" class="footer-col-app">
+                        <img src="assets/img/app-data/app-store.png" alt="">
+                    </a>
+    
+                    <a href="#" class="footer-col-app">
+                        <img src="assets/img/app-data/goole-play.png" alt="">
+                    </a>
+                </div>
+                <!-- /.footer-col-app-block -->
+            </div>
+            <!--/.footer-col-->
+
+            <div class="footer-col">
+                <h2 class="footer-col__title">Соц.сети</h2>
+
+                <div class="footer-col__social">
+                    <a href="#">
+                        <img src="assets/img/icons/footer/tg.svg" alt="">
+                    </a>
+
+                    <a href="#">
+                        <img src="assets/img/icons/footer/inst.svg" alt="">
+                    </a>
+
+                    <a href="#">
+                        <img src="assets/img/icons/footer/wh.svg" alt="">
+                    </a>
+                </div>
+                <!-- /.footer-col__social -->
+
+                <img src="assets/img/logo-b.png" class="yuwell-footer-logo" alt="">
+            </div>
+            <!--/.footer-col-->
+        </div>
+        <!-- /.box-container -->
+    </footer>
+    <!-- /.footer -->
 
     <script src="assets/js/splide/js/splide.min.js"></script>
     <script src="assets/js/main.js"></script>

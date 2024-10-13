@@ -38,6 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         })
     }
+
+    if(document.querySelector('.custom-select__list-item')) {
+        document.querySelectorAll('.custom-select__list-item').forEach((item) => {
+            item.addEventListener('click', function() {
+                console.log('click!')
+            })
+        })
+    }
 })
 
 const addReadmoreHeight = () => {
@@ -93,4 +101,16 @@ const changeTab = (tabBtn) => {
         }
     })
 }
+
+document.querySelector('.custom-select__current').addEventListener('click', function(e){
+    let selectList = this.parentNode.querySelector('.custom-select__list')
+    let arrow = this.parentNode.querySelector('.select-arrow')
+    selectList.classList.toggle('custom-select__list-active')
+    arrow.classList.toggle('select-arrow_active')
+})
+
+document.querySelector('.yuwell-menu').addEventListener('click', function() {
+    let menu = document.querySelector('.header-menu')
+    menu.classList.toggle('header-menu_active')
+})
 
