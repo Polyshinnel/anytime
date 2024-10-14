@@ -225,11 +225,14 @@ body {
 .cart-block {
   position: fixed;
   right: 0;
-  top: 140px;
-  width: 390px;
+  top: 0;
+  width: 400px;
   background: #fff;
   padding: 30px;
-  right: calc((100% - 1220px) / 2);
+  right: 0;
+  height: 100dvh;
+  overflow: hidden;
+  z-index: 100;
 }
 
 .motto-block {
