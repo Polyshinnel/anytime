@@ -114,3 +114,18 @@ document.querySelector('.yuwell-menu').addEventListener('click', function() {
     menu.classList.toggle('header-menu_active')
 })
 
+document.querySelector('.close-menu').addEventListener('click', function() {
+    let menu = document.querySelector('.header-menu')
+    menu.classList.toggle('header-menu_active')
+})
+
+
+document.querySelector('.yuwell-cart__block').addEventListener('click', function() {
+    let menu = document.querySelector('.cart-block')
+    menu.classList.toggle('cart-block_active')
+})
+
+document.querySelector('.close-cart').addEventListener('click', function() {
+    let menu = document.querySelector('.cart-block')
+    menu.classList.toggle('cart-block_active')
+})
