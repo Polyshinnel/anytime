@@ -195,6 +195,7 @@ body{
     }
 }
 
+
 .cart-block_active{
     right: 0;
 }
@@ -370,6 +371,16 @@ body{
         top: 0;
         width: 100%;
         height: 100dvh;
+        z-index: 100;
+        border-radius: 0;
+    }
+
+    .cart-block{
+        width: 100%;
+    }
+
+    .header-menu_active{
+        right: 0;
     }
 }
 
@@ -1508,6 +1519,36 @@ body{
 @media(max-width: 580px) {
     .main-recall-form{
         height: auto;
+        flex-direction: column;
+        padding: 35px;
+        padding-bottom: 150px;
+        margin-top: 30px;
+
+        .main-recall-form-text{
+            width: 100%;
+
+            h2{
+                font-size: 22px;
+            }
+
+            p{
+                font-size: 14px;
+            }
+        }
+
+        .main-recall-form-form{
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .form-img{
+            bottom: -120px;
+            left: calc((100% - 250px) / 2);
+
+            img{
+                width: 250px;
+            }
+        }
     }
 }
 
@@ -1577,6 +1618,57 @@ body{
         position: absolute;
         left: calc((100% - 1220px) / 2);
         bottom: calc((100% - 694px) / 2);
+    }
+}
+
+@media(max-width: 580px) {
+    .follow-app{
+        margin-top: 50px;
+        height: 500px;
+        border: none;
+        box-shadow: none;
+        background-image: url('../img/follow-any-time-bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        .follow-app__wrapper{
+            align-items: flex-start;
+            padding-top: 50px;
+
+            .follow-app__wrapper-text{
+                width: 100%;
+                margin: 0;
+                
+                
+                h2{
+                    font-size: 30px;
+                    color: #fff;
+                }
+
+                p{
+                    margin-top: 10px;
+                    color: #fff;
+                    font-size: 18px;
+                }
+
+                button{
+                    width: 100%;
+                    height: 35px;
+                    font-size: 14px;
+                }
+
+                .follow-app__store{
+                    display: none;
+                }
+            }
+        }
+
+        .follow-app-phone{
+            width: 280px;
+            bottom: -350px;
+            left: calc((100% - 280px) / 2);
+        }
     }
 }
 
@@ -1691,6 +1783,24 @@ body{
     }
 }
 
+@media(max-width: 580px) {
+    .reviews{
+        margin-top: 300px;
+
+        .reviews-block{
+            .splide__arrows{
+                width: 94%;
+                left: 3%;
+            }
+        } 
+
+        .review-item{
+            width: 100%;
+            margin-left: 0;
+        }
+    } 
+}
+
 .need-help{
     margin-top: 100px;
 
@@ -1751,6 +1861,53 @@ body{
     }
 }
 
+@media(max-width: 580px) {
+    .need-help{
+        margin-top: 30px;
+
+        h2{
+            font-size: 24px;
+        }
+
+        .need-help__list{
+            flex-direction: column;
+            row-gap: 30px;
+
+            .need-help__list-item{
+                flex-direction: row;
+                width: 100%;
+                align-items: flex-start;
+                justify-content: space-between;
+
+                .img-box{
+                    width: 50px;
+                    height: 50px;
+
+                    img{
+                        height: auto;
+                        width: 50px;
+                    }
+                }
+
+                .need-help__list-item-text{
+                    width: calc(100% - 90px);
+
+                    h3{
+                        font-size: 18px;
+                        text-align: left;
+                    }
+
+                    p{
+                        font-size: 14px;
+                        text-align: left;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .manage-glukoza-level{
     margin-top: 150px;
     height: 270px;
@@ -1793,6 +1950,33 @@ body{
     }
 }
 
+@media(max-width: 580px) {
+    .manage-glukoza-level{
+        height: auto;
+
+        .box-container{
+            height: auto;
+            justify-content: center;
+        }
+
+        .manage-glukoza-level-text{
+            width: 250px;
+            padding: 170px 0 40px;
+
+
+            h2{
+                font-size: 24px;
+            }
+        }
+
+        .manage-glukoza-level-img{
+            width: 90%;
+            left: 5%;
+            height: 200px;
+        }
+    }
+}
+
 .faq-block{
     margin-top: 170px;
     width: 100%;
@@ -1812,6 +1996,12 @@ body{
         margin-top: 20px;
         text-align: center;
         font-size: 30px;
+    }
+}
+
+@media(max-width: 580px) {
+    .faq-block{
+        display: none;
     }
 }
 
@@ -1901,6 +2091,15 @@ body{
 
         .yuwell-footer-logo{
             margin-top: 15px;
+        }
+    }
+}
+
+@media(max-width: 580px) {
+    .footer{
+        .box-container{
+            flex-direction: column;
+            row-gap: 20px;
         }
     }
 }

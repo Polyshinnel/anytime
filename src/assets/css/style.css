@@ -397,6 +397,14 @@ body {
     top: 0;
     width: 100%;
     height: 100dvh;
+    z-index: 100;
+    border-radius: 0;
+  }
+  .cart-block {
+    width: 100%;
+  }
+  .header-menu_active {
+    right: 0;
   }
 }
 .motto-block {
@@ -1363,6 +1371,30 @@ body {
 @media (max-width: 580px) {
   .main-recall-form {
     height: auto;
+    flex-direction: column;
+    padding: 35px;
+    padding-bottom: 150px;
+    margin-top: 30px;
+  }
+  .main-recall-form .main-recall-form-text {
+    width: 100%;
+  }
+  .main-recall-form .main-recall-form-text h2 {
+    font-size: 22px;
+  }
+  .main-recall-form .main-recall-form-text p {
+    font-size: 14px;
+  }
+  .main-recall-form .main-recall-form-form {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .main-recall-form .form-img {
+    bottom: -120px;
+    left: calc((100% - 250px) / 2);
+  }
+  .main-recall-form .form-img img {
+    width: 250px;
   }
 }
 .follow-app {
@@ -1425,6 +1457,48 @@ body {
   bottom: calc((100% - 694px) / 2);
 }
 
+@media (max-width: 580px) {
+  .follow-app {
+    margin-top: 50px;
+    height: 500px;
+    border: none;
+    box-shadow: none;
+    background-image: url("../img/follow-any-time-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .follow-app .follow-app__wrapper {
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+  .follow-app .follow-app__wrapper .follow-app__wrapper-text {
+    width: 100%;
+    margin: 0;
+  }
+  .follow-app .follow-app__wrapper .follow-app__wrapper-text h2 {
+    font-size: 30px;
+    color: #fff;
+  }
+  .follow-app .follow-app__wrapper .follow-app__wrapper-text p {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 18px;
+  }
+  .follow-app .follow-app__wrapper .follow-app__wrapper-text button {
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+  }
+  .follow-app .follow-app__wrapper .follow-app__wrapper-text .follow-app__store {
+    display: none;
+  }
+  .follow-app .follow-app-phone {
+    width: 280px;
+    bottom: -350px;
+    left: calc((100% - 280px) / 2);
+  }
+}
 .reviews {
   margin-top: 150px;
 }
@@ -1520,6 +1594,19 @@ body {
   align-items: center;
 }
 
+@media (max-width: 580px) {
+  .reviews {
+    margin-top: 300px;
+  }
+  .reviews .reviews-block .splide__arrows {
+    width: 94%;
+    left: 3%;
+  }
+  .reviews .review-item {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 .need-help {
   margin-top: 100px;
 }
@@ -1572,6 +1659,44 @@ body {
   color: var(--hover-color);
 }
 
+@media (max-width: 580px) {
+  .need-help {
+    margin-top: 30px;
+  }
+  .need-help h2 {
+    font-size: 24px;
+  }
+  .need-help .need-help__list {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .need-help .need-help__list .need-help__list-item {
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .need-help .need-help__list .need-help__list-item .img-box {
+    width: 50px;
+    height: 50px;
+  }
+  .need-help .need-help__list .need-help__list-item .img-box img {
+    height: auto;
+    width: 50px;
+  }
+  .need-help .need-help__list .need-help__list-item .need-help__list-item-text {
+    width: calc(100% - 90px);
+  }
+  .need-help .need-help__list .need-help__list-item .need-help__list-item-text h3 {
+    font-size: 18px;
+    text-align: left;
+  }
+  .need-help .need-help__list .need-help__list-item .need-help__list-item-text p {
+    font-size: 14px;
+    text-align: left;
+    margin-top: 5px;
+  }
+}
 .manage-glukoza-level {
   margin-top: 150px;
   height: 270px;
@@ -1610,6 +1735,27 @@ body {
      object-fit: cover;
 }
 
+@media (max-width: 580px) {
+  .manage-glukoza-level {
+    height: auto;
+  }
+  .manage-glukoza-level .box-container {
+    height: auto;
+    justify-content: center;
+  }
+  .manage-glukoza-level .manage-glukoza-level-text {
+    width: 250px;
+    padding: 170px 0 40px;
+  }
+  .manage-glukoza-level .manage-glukoza-level-text h2 {
+    font-size: 24px;
+  }
+  .manage-glukoza-level .manage-glukoza-level-img {
+    width: 90%;
+    left: 5%;
+    height: 200px;
+  }
+}
 .faq-block {
   margin-top: 170px;
   width: 100%;
@@ -1630,6 +1776,11 @@ body {
   font-size: 30px;
 }
 
+@media (max-width: 580px) {
+  .faq-block {
+    display: none;
+  }
+}
 .footer {
   margin-top: 100px;
   border-top: 1px solid #ccc;
@@ -1702,4 +1853,11 @@ body {
 }
 .footer .footer-col .yuwell-footer-logo {
   margin-top: 15px;
+}
+
+@media (max-width: 580px) {
+  .footer .box-container {
+    flex-direction: column;
+    row-gap: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
