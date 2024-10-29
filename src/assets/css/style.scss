@@ -126,6 +126,7 @@ body{
     padding: 55px 25px 35px;
     border: 1px solid #ccc;
     transition: 0.5s right ease;
+    z-index: 50;
 
     .close-menu{
         position: absolute;
@@ -2182,6 +2183,180 @@ body{
                 font-size: 20px;
                 font-weight: 300;
             }
+        }
+    }
+}
+
+@media(max-width: 580px) {
+    .page-title-block{
+        .page-title-block__wrapper{
+            .page-title__block-bg{
+                padding: 20px;
+
+                h1{
+                    font-size: 32px;
+                    width: 100%;
+                    text-align: left;
+                }
+
+                p{
+                    margin-top: 20px;
+                    font-size: 16px;
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+        } 
+    } 
+}
+
+.faq-section{
+    margin-top: 40px;
+
+    h2{
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+
+    .faq-section-list{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .faq-section__item{
+        width: 100%;
+
+        .faq-section__item-head{
+            padding: 20px 25px;
+            border-radius: 20px;
+            background: var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+
+            h3{
+                font-weight: 400;
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+
+        .faq-section__item-body{
+            background: #ECECEC;
+            border-radius: 0 0 20px 20px;
+            transition: 0.3s all ease;
+            overflow: hidden;
+
+            p{
+                margin: 20px;
+            }
+        }
+    }
+
+    .faq-section__item_active{
+        .faq-section__item-head{
+            border-radius: 20px 20px 0 0;
+        }
+    }
+}
+
+.page-title{
+    margin-top: 40px;
+}
+
+.delivery-payment-common{
+    position: relative;
+    width: 100%;
+    background: rgba($color: #fff, $alpha: 0.79);
+    border-radius: 30px;
+    padding: 60px 120px;
+    border: 1px solid #ccc;
+    box-shadow: 4px 4px 15px 0px rgba(34, 60, 80, 0.2);
+    overflow: hidden;
+    margin-top: 60px;
+
+    z-index: 20;
+
+    .delivery-payment-common__title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2{
+            color: #5A5A5A;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        img{
+            margin-left: 10px;
+        }
+    }
+
+    .delivery-payment-common__img{
+        position: absolute;
+        right: -15px;
+        bottom: -15px;
+    }
+
+    .delivery-payment-common__text{
+        margin-top: 20px;
+        width: 700px;
+        p{
+            color: #5A5A5A;
+        }
+
+        ul{
+            padding-left: 20px;
+            
+            li{
+                color: #5A5A5A;
+            }
+        }
+
+        i{
+            margin-top: 20px;
+            color: #5A5A5A;
+        }
+    }
+}
+
+.delivery-block{
+    position: relative;
+
+    .delivery-block-bg{
+        position: absolute;
+        top: calc(50% - 450px);
+    }
+}
+
+@media(max-width: 580px) {
+    .delivery-payment-common{
+        padding: 25px 20px;
+
+        .delivery-payment-common__img{
+            position: relative;
+            bottom: -50px;
+        }
+
+        .delivery-payment-common__text{
+            width: 100%;
+        }
+    }
+
+    .delivery-block{
+        position: relative;
+        overflow: hidden;
+    
+        .delivery-block-bg{
+            position: absolute;
+            height: 596px;
+            top: calc(50% - 200px);
+            transform: scale(-1, 1);
         }
     }
 }

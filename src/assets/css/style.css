@@ -185,6 +185,7 @@ body {
   padding: 55px 25px 35px;
   border: 1px solid #ccc;
   transition: 0.5s right ease;
+  z-index: 50;
 }
 .header-menu .close-menu {
   position: absolute;
@@ -1921,4 +1922,147 @@ body {
   margin-top: 10px;
   font-size: 20px;
   font-weight: 300;
+}
+
+@media (max-width: 580px) {
+  .page-title-block .page-title-block__wrapper .page-title__block-bg {
+    padding: 20px;
+  }
+  .page-title-block .page-title-block__wrapper .page-title__block-bg h1 {
+    font-size: 32px;
+    width: 100%;
+    text-align: left;
+  }
+  .page-title-block .page-title-block__wrapper .page-title__block-bg p {
+    margin-top: 20px;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+  }
+}
+.faq-section {
+  margin-top: 40px;
+}
+.faq-section h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.faq-section .faq-section-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.faq-section .faq-section__item {
+  width: 100%;
+}
+.faq-section .faq-section__item .faq-section__item-head {
+  padding: 20px 25px;
+  border-radius: 20px;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.faq-section .faq-section__item .faq-section__item-head h3 {
+  font-weight: 400;
+  color: #fff;
+  font-size: 20px;
+}
+.faq-section .faq-section__item .faq-section__item-body {
+  background: #ECECEC;
+  border-radius: 0 0 20px 20px;
+  transition: 0.3s all ease;
+  overflow: hidden;
+}
+.faq-section .faq-section__item .faq-section__item-body p {
+  margin: 20px;
+}
+.faq-section .faq-section__item_active .faq-section__item-head {
+  border-radius: 20px 20px 0 0;
+}
+
+.page-title {
+  margin-top: 40px;
+}
+
+.delivery-payment-common {
+  position: relative;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.79);
+  border-radius: 30px;
+  padding: 60px 120px;
+  border: 1px solid #ccc;
+  box-shadow: 4px 4px 15px 0px rgba(34, 60, 80, 0.2);
+  overflow: hidden;
+  margin-top: 60px;
+  z-index: 20;
+}
+.delivery-payment-common .delivery-payment-common__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delivery-payment-common .delivery-payment-common__title h2 {
+  color: #5A5A5A;
+  font-size: 32px;
+  font-weight: 700;
+}
+.delivery-payment-common .delivery-payment-common__title img {
+  margin-left: 10px;
+}
+.delivery-payment-common .delivery-payment-common__img {
+  position: absolute;
+  right: -15px;
+  bottom: -15px;
+}
+.delivery-payment-common .delivery-payment-common__text {
+  margin-top: 20px;
+  width: 700px;
+}
+.delivery-payment-common .delivery-payment-common__text p {
+  color: #5A5A5A;
+}
+.delivery-payment-common .delivery-payment-common__text ul {
+  padding-left: 20px;
+}
+.delivery-payment-common .delivery-payment-common__text ul li {
+  color: #5A5A5A;
+}
+.delivery-payment-common .delivery-payment-common__text i {
+  margin-top: 20px;
+  color: #5A5A5A;
+}
+
+.delivery-block {
+  position: relative;
+}
+.delivery-block .delivery-block-bg {
+  position: absolute;
+  top: calc(50% - 450px);
+}
+
+@media (max-width: 580px) {
+  .delivery-payment-common {
+    padding: 25px 20px;
+  }
+  .delivery-payment-common .delivery-payment-common__img {
+    position: relative;
+    bottom: -50px;
+  }
+  .delivery-payment-common .delivery-payment-common__text {
+    width: 100%;
+  }
+  .delivery-block {
+    position: relative;
+    overflow: hidden;
+  }
+  .delivery-block .delivery-block-bg {
+    position: absolute;
+    height: 596px;
+    top: calc(50% - 200px);
+    transform: scale(-1, 1);
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -46,6 +46,29 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         })
     }
+
+    if(document.querySelector('.faq-section__item')) {
+        let faqItem = document.querySelectorAll('.faq-section__item')
+        faqItem.forEach((item) => {
+            item.querySelector('.faq-section__item-body').style.height = 0
+            item.addEventListener('click', () => {
+                let textBody = item.querySelector('.faq-section__item-body')
+                let textHeight = item.querySelector('.faq-section__item-body p').clientHeight
+                textHeight = parseInt(textHeight) + 40
+                let img = item.querySelector('.faq-section__item-head img')
+
+                if(item.classList.contains('faq-section__item_active')) {
+                    item.classList.remove('faq-section__item_active')
+                    textBody.style.height = 0
+                    img.src = 'assets/img/icons/common/plus-w.svg'
+                } else {
+                    item.classList.add('faq-section__item_active');
+                    textBody.style.height = `${textHeight}px`
+                    img.src = 'assets/img/icons/common/minus-w.svg'
+                }
+            })
+        })
+    }
 })
 
 const addReadmoreHeight = () => {
