@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/js/splide/css/splide-core.min.css">
+    <link rel="stylesheet" href="assets/js/fancybox/fancybox.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Anytime CGM</title>
 </head>
@@ -195,7 +196,62 @@
         <div class="box-container">
             <div class="product-list__item product-list__item_mod">
                 <div class="product-list__item-img product-list__item-img_mod">
-                    <img src="assets/img/products/1.png" alt="">
+                    <section
+                    id="main-carousel"
+                    class="splide"
+                    aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel."
+                    >
+                    <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src="assets/img/products/tumb1.jpg" data-fancybox="gallery" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="assets/img/products/tumb2.jpg" data-fancybox="gallery" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="assets/img/products/tumb3.jpg" data-fancybox="gallery" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="assets/img/products/tumb1.jpg" data-fancybox="gallery" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="assets/img/products/tumb2.jpg" data-fancybox="gallery" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="assets/img/products/tumb3.jpg" data-fancybox="gallery" alt="">
+                                </li>
+                            </ul>
+                    </div>
+                    </section>
+                    <section
+                    id="thumbnail-carousel"
+                    class="splide"
+                    aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel."
+                    >
+                    <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src="assets/img/products/tumb1.jpg" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="assets/img/products/tumb2.jpg" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="assets/img/products/tumb3.jpg" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="assets/img/products/tumb1.jpg" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="assets/img/products/tumb2.jpg" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="assets/img/products/tumb3.jpg" alt="">
+                                </li>
+                            </ul>
+                    </div>
+                    </section>
                 </div>
     
                 <div class="product-list__item-text">
@@ -389,5 +445,45 @@
     <!-- /.footer -->
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/fancybox/fancybox.umd.js"></script>
+    <script src="assets/js/splide/js/splide.min.js"></script>
+
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function () {
+        var main = new Splide( '#main-carousel', {
+            type      : 'fade',
+            rewind    : true,
+            pagination: false,
+            arrows    : false,
+            fixedHeight : 300,
+        } );
+
+        var thumbnails = new Splide( '#thumbnail-carousel', {
+            fixedWidth  : 100,
+            fixedHeight : 60,
+            gap         : 10,
+            rewind      : true,
+            pagination  : false,
+            isNavigation: true,
+            arrows    : false,
+            breakpoints : {
+                600: {
+                    fixedWidth : 60,
+                    fixedHeight: 44,
+                },
+            },
+        } );
+
+        main.sync( thumbnails );
+        main.mount();
+        thumbnails.mount();
+        } );
+    </script>
+
+    <script>
+        Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+        });
+    </script>
 </body>
 </html>
