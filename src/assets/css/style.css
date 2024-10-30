@@ -2120,6 +2120,7 @@ body {
   width: 100%;
   background-image: url(../img/common-char-bg.jpg);
   min-height: 400px;
+  margin-bottom: -100px;
 }
 
 .common-product-char__wrapper {
@@ -2228,8 +2229,8 @@ body {
 .input-block input[type=text] {
   width: 100%;
   height: 38px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
   margin-top: 5px;
   padding: 0 10px;
 }
@@ -2246,8 +2247,8 @@ body {
   padding: 10px;
   font-family: "Roboto", sans-serif;
   resize: none;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
   margin-top: 5px;
 }
 
