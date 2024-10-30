@@ -437,7 +437,7 @@ body {
   margin-top: 30px;
   color: #fff;
 }
-.motto-block a button {
+.motto-block button {
   width: 250px;
   height: 52px;
   border-radius: 50px;
@@ -449,7 +449,7 @@ body {
   cursor: pointer;
   transition: 0.3s all ease;
 }
-.motto-block a button:hover {
+.motto-block button:hover {
   background: #fff;
   color: var(--primary-font-color);
 }
@@ -457,7 +457,7 @@ body {
 @media (max-width: 580px) {
   .motto-block {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 190px;
   }
   .motto-block h1 {
     color: #fff;
@@ -467,6 +467,11 @@ body {
   .motto-block p {
     margin-top: 10px;
     color: #fff;
+  }
+}
+@media (max-width: 390px) {
+  .motto-block {
+    margin-top: 50px;
   }
 }
 .header-app-phone {
@@ -2538,5 +2543,64 @@ body {
   }
   .total-calculate {
     width: 100%;
+  }
+}
+.instructions-block {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+}
+.instructions-block .instructions-block__item {
+  width: 585px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.instructions-block .instructions-block__item img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.instructions-block .instructions-block__item .instructions-block__item-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(69, 69, 69, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.instructions-block .instructions-block__item .instructions-block__item-wrapper p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+.instructions-block .instructions-block__item .instructions-block__item-wrapper button {
+  width: 230px;
+  height: 40px;
+  border-radius: 50px;
+  background: var(--primary-color);
+  transition: 0.3s all ease;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.instructions-block .instructions-block__item .instructions-block__item-wrapper button:hover {
+  background: var(--hover-color);
+}
+
+@media (max-width: 580px) {
+  .instructions-block .instructions-block__item {
+    width: 100%;
+    height: 250px;
   }
 }/*# sourceMappingURL=style.css.map */

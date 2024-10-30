@@ -152,3 +152,9 @@ document.querySelector('.close-cart').addEventListener('click', function() {
     let menu = document.querySelector('.cart-block')
     menu.classList.toggle('cart-block_active')
 })
+
+if(document.querySelector('.more-info-scroll')) {
+    document.querySelector('.more-info-scroll').addEventListener('click', function() {
+        document.getElementById('info-targer').scrollIntoView({ behavior: 'smooth' });
+    })
+}
