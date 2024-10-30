@@ -275,9 +275,13 @@
 
                         <div class="quantity-col">
                             <div class="quantity-block">
-                                <button>-</button>
+                                <button class="button button-minus">-</button>
                                 <input type="text" class="product-order-quantity" value="1">
-                                <button>+</button>
+                                <button class="button button-plus">+</button>
+                            </div>
+
+                            <div class="delete-block">
+                                <img src="assets/img/icons/common/delete.svg" alt="">
                             </div>
                         </div>
                         <!-- /.quantity-col -->
@@ -307,9 +311,13 @@
 
                         <div class="quantity-col">
                             <div class="quantity-block">
-                                <button>-</button>
+                                <button class="button button-minus">-</button>
                                 <input type="text" class="product-order-quantity" value="1">
-                                <button>+</button>
+                                <button class="button button-plus">+</button>
+                            </div>
+
+                            <div class="delete-block">
+                                <img src="assets/img/icons/common/delete.svg" alt="">
                             </div>
                         </div>
                         <!-- /.quantity-col -->
@@ -329,19 +337,26 @@
 
                 <div class="delivery-methods">
                     <div class="delivery-method">
-                        <label for="self-pickup">
-                            <input type="checkbox" name="self-pickup" checked id="self-pickup" data-item="self-pickup">
-                            <span></span>
-                        </label>
-                        <p>Самовывоз из офиса AnyTime</p>
+                        <div class="delivery-method__checkbox">
+                            <label for="self-pickup">
+                                <input type="checkbox" name="self-pickup" checked id="self-pickup" data-item="self-pickup">
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="delivery-method-text">
+                            <p>Самовывоз из офиса AnyTime</p>
+                        </div>
                     </div>
                     <!-- /.delivery-method -->
 
                     <div class="delivery-method">
-                        <label for="boxberry">
-                            <input type="checkbox" name="boxberry" id="boxberry" data-item="boxberry">
-                            <span></span>
-                        </label>
+                        <div class="delivery-method__checkbox">
+                            <label for="boxberry">
+                                <input type="checkbox" name="boxberry" id="boxberry" data-item="boxberry">
+                                <span></span>
+                            </label>
+                        </div>
+                        
                         <div class="delivery-method-text">
                             <img src="assets/img/delivery-payment/boxberry-logo.png" alt="">
                             <p class="select-boxberry">Выбрать пункт выдачи на карте</p>
@@ -355,15 +370,15 @@
 
             <div class="total-calculate">
                 <div class="add-params">
-                    <span></span>
+                    <span>Доставка</span>
                     <div class="line"></div>
-                    <span class="price-add"></span>
+                    <span class="price-add">300₽</span>
                 </div>
     
                 <div class="total-block">
                     <h3><b>Итого</b> 7300₽</h3>
     
-                    <button>Оформить заказ</button>
+                    <button class="confirm-order">Оформить заказ</button>
                 </div>
             </div>
             <!-- /.total-calculate -->

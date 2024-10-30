@@ -2264,12 +2264,14 @@ body {
   font-weight: 500;
 }
 .order-items-list .order-list__header .product-col {
-  width: 600px;
+  width: 700px;
   color: #666;
 }
 .order-items-list .order-list__header .price-col {
-  width: 250px;
+  width: 150px;
   color: #666;
+  text-align: right;
+  padding-right: 10px;
 }
 .order-items-list .order-list__header .quantity-col {
   width: 250px;
@@ -2289,8 +2291,8 @@ body {
   align-items: center;
 }
 .order-list__item .product-col {
-  width: 600px;
-  padding-left: 20px;
+  width: 700px;
+  padding-right: 20px;
   display: flex;
   align-items: center;
 }
@@ -2308,19 +2310,233 @@ body {
      object-fit: contain;
 }
 .order-list__item .product-col h3 {
-  margin-left: 20px;
-  width: calc(100% - 40px);
-  font-size: 20px;
+  margin-left: 40px;
+  width: calc(100% - 60px);
+  font-size: 18px;
   font-weight: 400;
   color: #7D7D7D;
 }
 .order-list__item .price-col {
-  width: 250px;
+  width: 150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.order-list__item .price-col span {
+  color: var(--primary-color);
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+.order-list__item .price-col p {
+  font-weight: 500;
 }
 .order-list__item .quantity-col {
   width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order-list__item .quantity-col .delete-block {
+  display: none;
+}
+.order-list__item .quantity-col .quantity-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+}
+.order-list__item .quantity-col .quantity-block .button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  transition: 0.3s all ease;
+}
+.order-list__item .quantity-col .quantity-block .button:hover {
+  background: #edffd4;
+}
+.order-list__item .quantity-col .quantity-block .button-minus {
+  border-radius: 10px 0 0 10px;
+}
+.order-list__item .quantity-col .quantity-block .button-plus {
+  border-radius: 0 10px 10px 0;
+}
+.order-list__item .quantity-col .quantity-block input {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
 }
 .order-list__item .delete-block {
   margin-left: 30px;
   cursor: pointer;
+}
+
+.delivery-block {
+  margin-top: 40px;
+}
+.delivery-block h2 {
+  color: var(--primary-color);
+  font-size: 32px;
+  font-weight: 700;
+}
+.delivery-block .delivery-methods {
+  margin-top: 20px;
+}
+.delivery-block .delivery-methods .delivery-method {
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: #fff;
+  border-radius: 17px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.delivery-block .delivery-methods .delivery-method .delivery-method__checkbox {
+  cursor: pointer;
+}
+.delivery-block .delivery-methods .delivery-method .delivery-method__checkbox label {
+  position: relative;
+}
+.delivery-block .delivery-methods .delivery-method .delivery-method__checkbox input[type=checkbox] {
+  width: 1px;
+  position: absolute;
+  z-index: -1;
+}
+.delivery-block .delivery-methods .delivery-method .delivery-method__checkbox span {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.delivery-block .delivery-methods .delivery-method .delivery-method__checkbox input[type=checkbox]:checked + span::before {
+  content: "";
+  background-image: url("../img/icons/common/checked.svg");
+  width: 20px;
+  height: 24px;
+  position: absolute;
+  bottom: 3px;
+  left: 2px;
+}
+.delivery-block .delivery-methods .delivery-method .delivery-method-text {
+  margin-left: 30px;
+}
+.delivery-block .delivery-methods .delivery-method .delivery-method-text img {
+  width: 100px;
+}
+.delivery-block .delivery-methods .delivery-method .delivery-method-text p {
+  color: var(--secondary-font-color);
+  font-size: 20px;
+}
+.delivery-block .delivery-methods .delivery-method .delivery-method-text .select-boxberry {
+  font-size: 16px;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s all ease;
+  margin-top: 5px;
+}
+.delivery-block .delivery-methods .delivery-method .delivery-method-text .select-boxberry:hover {
+  color: var(--hover-color);
+}
+
+.total-calculate {
+  margin-top: 40px;
+  width: 450px;
+}
+.total-calculate .add-params {
+  display: flex;
+  align-items: flex-end;
+}
+.total-calculate .add-params span {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--secondary-font-color);
+}
+.total-calculate .add-params .line {
+  width: 100%;
+  border-bottom: 1px dashed var(--primary-color);
+}
+.total-calculate .add-params .price-add {
+  color: var(--primary-color);
+}
+.total-calculate .total-block {
+  margin-top: 45px;
+}
+.total-calculate .total-block h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+.total-calculate .total-block h3 b {
+  font-weight: 700;
+}
+.total-calculate .total-block .confirm-order {
+  margin-top: 20px;
+  width: 100%;
+  background: var(--primary-color);
+  border: none;
+  height: 60px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.total-calculate .total-block .confirm-order:hover {
+  background: var(--hover-color);
+}
+
+@media (max-width: 580px) {
+  .personal-data-cart__block {
+    width: 100%;
+  }
+  .order-items-list .order-list__header {
+    display: none;
+  }
+  .order-list__item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .order-list__item .product-col {
+    width: 100%;
+  }
+  .order-list__item .product-col .img-box {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+  }
+  .order-list__item .product-col h3 {
+    margin-left: 20px;
+    width: calc(100% - 70px);
+    font-size: 14px;
+  }
+  .order-list__item .price-col {
+    width: 100%;
+  }
+  .order-list__item .quantity-col {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .order-list__item .quantity-col .delete-block {
+    display: block;
+  }
+  .order-list__item .delete-block {
+    display: none;
+  }
+  .delivery-block .delivery-methods .delivery-method {
+    width: 100%;
+    box-shadow: none;
+  }
+  .total-calculate {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
