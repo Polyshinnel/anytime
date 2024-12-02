@@ -40,12 +40,10 @@ body{
 .header-main{
     width: 100%;
     height: 100dvh;
-
-    .header-bg{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+    background: url('../img/header-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .header-wrapper{
         position: absolute;
@@ -92,6 +90,7 @@ body{
 .yuwell-cart-menu{
     display: flex;
     align-items: flex-start;
+    margin-left: 50px;
 
     .yuwell-cart__block{
         position: relative;
@@ -114,6 +113,11 @@ body{
         cursor: pointer;
         z-index: 50;
     }
+}
+
+.header-head-total{
+    display: flex;
+    align-items: center;
 }
 
 .header-menu{
@@ -365,6 +369,9 @@ body{
 
 
 @media(max-width: 580px) {
+    .header-main{
+        background-position-x: calc((100% / 2) - 80px);
+    }
     .header-nav{
         display: none;
     }
@@ -409,6 +416,7 @@ body{
 .motto-block{
     margin-top: 105px;
     width: 460px;
+    position: relative;
 
     h1{
         color: #fff;
@@ -465,10 +473,11 @@ body{
 }
 
 .header-app-phone{
-    width: 360px;
+    width: 460px;
     position: absolute;
-    bottom: 0;
-    left: calc((100% - 1220px) / 2);
+    top: 140%;
+    left: 0;
+
 }
 
 
@@ -487,17 +496,23 @@ body{
     }
 }
 
+@media(max-width: 1620px) {
+    .header-app-phone{
+        top: 130%;
+    }
+}
+
 @media(max-width: 1380px) {
     .header-app-phone{
-        width: 260px;
+        width: 360px;
+        top: 120%;
     }
 }
 
 @media(max-width: 580px) {
     .header-app-phone{
-        left: 20px;
-        bottom: -30px;
         z-index: 10;
+        width: 100%;
     }
 
     .header-app-about{
@@ -1149,7 +1164,7 @@ body{
             justify-content: space-between;
 
             .product-shop{
-                width: 170px;
+                width: 180px;
                 height: 38px;
 
                 span{
@@ -1161,7 +1176,7 @@ body{
             .product-quantity{
                 height: 38px;
                 margin-left: 0;
-                width: 100px;
+                width: 90px;
             }
         }
 
@@ -1172,6 +1187,25 @@ body{
                 height: 35px;
                 font-size: 14px;
                 width: 230px;
+            }
+        }
+    }
+}
+
+@media(max-width: 365px)
+{
+    .product-list__item-btns{
+        .product-list__item-btns-shop-quantity{
+            justify-content: space-between;
+
+            .product-shop{
+                width: 165px;
+                height: 38px;
+
+                span{
+                    font-size: 10px;
+                    margin-left: 10px;
+                }
             }
         }
     }
@@ -1863,7 +1897,7 @@ body{
             }
 
             h3{
-                font-size: 24px;
+                font-size: 28px;
                 font-weight: 700;
                 color: var(--primary-color);
                 text-align: center;
@@ -1873,6 +1907,7 @@ body{
                 margin-top: 10px;
                 font-size: 18px;
                 text-align: center;
+                line-height: 200%;
 
                 a{
                     color: var(--primary-color);
@@ -2022,6 +2057,10 @@ body{
         margin-top: 20px;
         text-align: center;
         font-size: 30px;
+
+        a{
+            color: var(--primary-color);
+        }
     }
 }
 
@@ -2132,8 +2171,8 @@ body{
 
 
 .header-head_mod{
-    margin-top: 20px;
-
+    margin-top: 0;
+    padding: 20px 0 10px;
     .header-logo{
         color: var(--primary-font-color);
     }
@@ -2160,11 +2199,21 @@ body{
 }
 
 @media(max-width: 580px) {
+    .header-common{
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 400;
+    }
     .header-head_mod{
         .header-menu{
             top: 0;
         }
     } 
+
+    .yuwell-cart-menu{
+        margin-left: 0;
+    }
 }
 
 .page-title-block{

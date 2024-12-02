@@ -155,6 +155,25 @@ document.querySelector('.close-cart').addEventListener('click', function() {
 
 if(document.querySelector('.more-info-scroll')) {
     document.querySelector('.more-info-scroll').addEventListener('click', function() {
-        document.getElementById('info-targer').scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('info-target').scrollIntoView({ behavior: 'smooth' });
     })
+}
+
+let video = document.querySelector('#hour-look-video')
+if(video)
+{
+    video.addEventListener('click', () => {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+        
+        const controlsVisible = video.hasAttribute('controls');
+        if (controlsVisible) {
+            video.removeAttribute('controls');
+        } else {
+            video.setAttribute('controls', 'controls');
+        }
+    });
 }
