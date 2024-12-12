@@ -16,28 +16,31 @@
     <header class="header-common">
         <div class="box-container">
             <div class="header-head header-head_mod">
-                <span class="header-logo">Anytime</span>
+                <a href="/" class="header-logo-link"><span class="header-logo">Anytime</span></a>
 
-                <nav class="header-nav">
-                    <a href="#">Каталог</a>
-                    <a href="#">Специалистам</a>
-                    <a href="#">Доставка и  оплата</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Контакты</a>
-                </nav>
-
-                <div class="yuwell-cart-menu">
-                    <img src="assets/img/logo-b.png" alt="" class="yewell-logo">
-                    <div class="yuwell-cart__block">
-                        <img src="assets/img/icons/header/cart-b.svg" alt="">
-                        <div class="yuwell-cart__counter">
-                            <span>3</span>
+                <div class="header-head-total">
+                    <nav class="header-nav">
+                        <a href="#">Каталог</a>
+                        <a href="#">Документация</a>
+                        <a href="#">Доставка и  оплата</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Контакты</a>
+                    </nav>
+    
+                    <div class="yuwell-cart-menu">
+                        <img src="assets/img/logo-b.png" alt="" class="yewell-logo">
+                        <div class="yuwell-cart__block">
+                            <img src="assets/img/icons/header/cart-b.svg" alt="">
+                            <div class="yuwell-cart__counter">
+                                <span>3</span>
+                            </div>
                         </div>
+                        <!--/.yuwell-cart__block-->
+                        <img src="assets/img/icons/header/menu-b.svg" alt="" class="yuwell-menu">
                     </div>
-                    <!--/.yuwell-cart__block-->
-                    <img src="assets/img/icons/header/menu-b.svg" alt="" class="yuwell-menu">
+                    <!-- /.yuwell-cart -->
                 </div>
-                <!-- /.yuwell-cart -->
+                
 
                 <div class="header-menu">
                     <div class="close-menu">
@@ -83,7 +86,7 @@
 
                     <ul class="header-menu-nav header-menu-nav_margin">
                         <li class="hidden"><a href="#">Каталог</a></li>
-                        <li class="hidden"><a href="#">Специалистам</a></li>
+                        <li class="hidden"><a href="#">Документация</a></li>
                         <li class="hidden"><a href="#">Доставка и оплата</a></li>
                         <li class="hidden"><a href="#">FAQ</a></li>
                         <li class="hidden nav-bottom"><a href="#">Контакты</a></li>
@@ -199,200 +202,33 @@
 
     <main>
         <div class="box-container">
-            <div class="product-page__title">
-                <ul class="breadcrumbs">
-                    <li><a href="#">Главная</a>&nbsp;/&nbsp;</li>
-                    <li>Оформление заказа</li>
-                </ul>
-                <!-- /.breadcrumbs -->
+            <div class="success-wrapper">
+                <div class="success-wrapper-text">
+                    <div class="success-wrapper-text__title">
+                        <h1>ПОЗДРАВЛЯЕМ!</h1>
+                        <p>Ваш заказ успешно оформлен.</p>
+                    </div>
+                    <!-- /.success-wrapper-text__title -->
+                    
+                    <div class="success-wrapper-text__block">
+                        <h2>Что дальше?</h2>
+                        <p>Наш менеджер свяжется с вами в ближайшее время для уточнения деталей. После подтверждения заказа начнется его обработка.</p>
+                        <a href="/"><button>Вернуться на главную</button></a>
+                    </div>
+                    <!-- /.success-wrapper-text__block -->
+                </div>
 
-                <h1>Оформление заказа</h1>
+                <div class="success-wrapper-img">
+                    <picture>
+                        <source srcset="assets/img/sucess-shop_mob.png" media="(max-width: 800px)">
+                        <img src="assets/img/sucess-shop.png" alt="Абстрактное изображение">
+                    </picture>
+                </div>
+                <!-- /.success-wrapper-img -->
             </div>
-            
-
-            <div class="personal-data-cart">
-                <h2>Данные клиента</h2>
-                <div class="personal-data-cart__block">
-                    <div class="input-block">
-                        <label for="cart-name">Ваше имя</label>
-                        <input type="text" id="cart-name" name="cart-name" placeholder="Ваше имя">
-                        <span class="err-text">Имя должно быть не менее 2х символов!</span>
-                    </div>
-                    <!-- /.input-block -->
-
-                    <div class="input-block">
-                        <label for="cart-phone">Телефон</label>
-                        <input type="text" id="cart-phone" name="cart-phone" placeholder="Ваш Телефон">
-                        <span class="err-text">Введите корректный телефон!</span>
-                    </div>
-                    <!-- /.input-block -->
-
-                    <div class="input-block">
-                        <label for="cart-mail">Почта</label>
-                        <input type="text" id="cart-mail" name="cart-mail" placeholder="Ваша почта">
-                        <span class="err-text">Введите корректную почту!</span>
-                    </div>
-                    <!-- /.input-block -->
-
-                    <div class="input-block">
-                        <label for="cart-comment">Комментарий</label>
-                        <textarea id="cart-comment" name="cart-comment" placeholder="Комментарий"></textarea>
-                    </div>
-                    <!-- /.input-block -->
-                </div>
-                <!-- /.personal-data-cart__block -->
-                
-            </div>
-            <!-- /.personal-data-cart -->
-
-            <div class="order-items-list">
-                <h2>Состав заказа</h2>
-
-                <div class="order-list__header">
-                    <div class="product-col">Продукт</div>
-                    <div class="price-col">Цена</div>
-                    <div class="quantity-col">Количество</div>
-                </div>
-                <!-- /.order-list__header -->
-
-                <div class="order-list">
-                    <div class="order-list__item">
-                        <div class="product-col">
-                            <a href="#">
-                                <div class="img-box">
-                                    <img src="assets/img/products/1.png" alt="">
-                                </div>
-                            </a>
-                            <a href="#"><h3>Аппликатор и сенсор Yuwell Anytime CGM</h3></a>
-                        </div>
-                        <!--/.product-col-->
-
-                        <div class="price-col">
-                            <span>3700₽</span>
-                            <p>3000₽</p>
-                        </div>
-                        <!-- /.price-col -->
-
-                        <div class="quantity-col">
-                            <div class="quantity-block">
-                                <button class="button button-minus">-</button>
-                                <input type="text" class="product-order-quantity" value="1">
-                                <button class="button button-plus">+</button>
-                            </div>
-
-                            <div class="delete-block">
-                                <img src="assets/img/icons/common/delete.svg" alt="">
-                            </div>
-                        </div>
-                        <!-- /.quantity-col -->
-
-                        <div class="delete-block">
-                            <img src="assets/img/icons/common/delete.svg" alt="">
-                        </div>
-                    </div>
-                    <!--/.order-list__item-->
-
-                    <div class="order-list__item">
-                        <div class="product-col">
-                            <a href="#">
-                                <div class="img-box">
-                                    <img src="assets/img/products/2.png" alt="">
-                                </div>
-                            </a>
-                            <a href="#"><h3>Трансмиттер с зарядным блоком Yuwell Anytime CGM</h3></a>
-                        </div>
-                        <!--/.product-col-->
-
-                        <div class="price-col">
-                            <span>3700₽</span>
-                            <p>3000₽</p>
-                        </div>
-                        <!-- /.price-col -->
-
-                        <div class="quantity-col">
-                            <div class="quantity-block">
-                                <button class="button button-minus">-</button>
-                                <input type="text" class="product-order-quantity" value="1">
-                                <button class="button button-plus">+</button>
-                            </div>
-
-                            <div class="delete-block">
-                                <img src="assets/img/icons/common/delete.svg" alt="">
-                            </div>
-                        </div>
-                        <!-- /.quantity-col -->
-
-                        <div class="delete-block">
-                            <img src="assets/img/icons/common/delete.svg" alt="">
-                        </div>
-                    </div>
-                    <!--/.order-list__item-->
-                </div>
-                <!--/.order-list-->
-            </div>
-            <!--/.order-items-list-->
-
-            <div class="delivery-block">
-                <h2>Способ доставки</h2>
-
-                <div class="delivery-methods">
-                    <div class="delivery-method">
-                        <div class="delivery-method__checkbox">
-                            <label for="self-pickup">
-                                <input type="checkbox" name="self-pickup" checked id="self-pickup" data-item="self-pickup">
-                                <span></span>
-                            </label>
-                        </div>
-                        <div class="delivery-method-text">
-                            <p>Самовывоз из офиса AnyTime</p>
-                        </div>
-                    </div>
-                    <!-- /.delivery-method -->
-
-                    <div class="delivery-method">
-                        <div class="delivery-method__checkbox">
-                            <label for="boxberry">
-                                <input type="checkbox" name="boxberry" id="boxberry" data-item="boxberry">
-                                <span></span>
-                            </label>
-                        </div>
-                        
-                        <div class="delivery-method-text">
-                            <img src="assets/img/delivery-payment/boxberry-logo.png" alt="">
-                            <p class="select-boxberry">Выбрать пункт выдачи на карте</p>
-                        </div>
-                    </div>
-                    <!-- /.delivery-method -->
-                </div>
-                <!-- /.delivery-methods -->
-            </div>
-            <!-- /.delivery-block -->
-
-            <div class="total-calculate">
-                <div class="add-params">
-                    <span>Доставка</span>
-                    <div class="line"></div>
-                    <span class="price-add">300₽</span>
-                </div>
-
-                <div class="promocode-block">
-                    <input type="text" name="promocode" id="promocode" placeholder="Введите промокод">
-                    <button>
-                        <img src="assets/img/icons/arrow-w.svg" alt="">
-                    </button>
-                </div>
-                <!-- /.promocode-block -->
-                <p class="promocode-block-text">Применен промокод на 10%</p>
-    
-                <div class="total-block">
-                    <h3 class="promo"><b>Итого</b> <span>7300₽</span><span class="">7000₽</span></h3>
-    
-                    <button class="confirm-order">Оформить заказ</button>
-                </div>
-            </div>
-            <!-- /.total-calculate -->
+            <!-- /.success-wrapper -->
         </div>
-        <!--/.box-container-->
+        
     </main>
 
     <footer class="footer">
